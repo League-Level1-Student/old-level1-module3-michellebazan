@@ -25,7 +25,7 @@ public class SimonSays extends KeyAdapter {
 
 	// Complete steps 1 - 7 before you test
 	// 1. Declare a JFrame variable
-	
+	JFrame frame2;
 	HashMap<Integer, String> images = new HashMap<Integer, String>();
 	private int imageIndex;
 	private int tries = 0;
@@ -45,8 +45,8 @@ public class SimonSays extends KeyAdapter {
 		// 'Simon says' otherwise press a different key"
 		JOptionPane.showMessageDialog(null, "Press the matching key when Simon says' otherwise press a different key");
 		// 4. Call the showImage method to show an image
-		showImage()
-
+		showImage();
+	}
 	public void keyPressed(KeyEvent e) {
 		// 15. Make a points variable to track the score.
 			int score = 0;
@@ -72,17 +72,17 @@ public class SimonSays extends KeyAdapter {
 			// 26. Tell the user their score
 		JOptionPane.showMessageDialog(null, score);
 			// 27. Exit the program
-		
+		System.exit(0);
 	}
 		// 23. Dispose of the frame
-	
+	frame2.dispose();
 		// 24. Call the showImage method to show a new image
-	showImage()
+	showImage();
 	}
 
 	private void showImage() {
 		// 5. Initialize your frame to a new JFrame()
-		JFrame frame2 = new JFrame();
+		frame2 = new JFrame();
 		// 6. Set the frame to visible
 		frame2.isVisible();
 		// 7. Uncomment the following line to add a random image to your frame
