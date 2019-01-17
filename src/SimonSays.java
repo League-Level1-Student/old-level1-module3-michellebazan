@@ -59,11 +59,13 @@ public class SimonSays extends KeyAdapter {
 			speak("You were correct");
 	}
 		// 19. If the keyCode doesn't match the imageIndex and "Simon didn't say..."
-	else {	
+	else if(e.getKeyCode()!= imageIndex && simonSays==false){	
 			// 20.  Increase the value of score
 			score = +1;
 			// 21. Use the speak method to tell the user they were correct
 			speak("You were correct");
+	}else {
+		speak("You were incorrect");
 	}
 		// 22. Increment tries by 1
 		tries = +1;
@@ -84,7 +86,7 @@ public class SimonSays extends KeyAdapter {
 		// 5. Initialize your frame to a new JFrame()
 		frame2 = new JFrame();
 		// 6. Set the frame to visible
-		frame2.isVisible();
+		frame2.setVisible(true);
 		// 7. Uncomment the following line to add a random image to your frame
 		frame2.add(getNextRandomImage());
 		// 8. Set the name of your frame
@@ -94,7 +96,7 @@ public class SimonSays extends KeyAdapter {
 		// 10. Set the defaultCloseOperation of your from to JFrame.EXIT_ON_CLOSE
 		frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// 11. Add a key listener to the frame
-		frame2.addKeyListener(null);
+		frame2.addKeyListener(this);
 		// 12. Create a new instance of Random
 		Random ran = new Random();
 		// 13. Use the Random and the speak method to either say 
@@ -141,10 +143,12 @@ public class SimonSays extends KeyAdapter {
  * BONUS!
  * Add a timer :
  * ~~~ where the code starts running ~~~ 
- * timeAtStart = newDate();
+ *timeAtStart = newDate();
  *
  * ~~~ where the code ends ~~~ 
  * Date timeAtEnd = new Date();
  * System.out.println((timeAtEnd.getTime()-timeAtStart.getTime())/1000);
  * System.exit(0);
+ * I changed something
  */
+
