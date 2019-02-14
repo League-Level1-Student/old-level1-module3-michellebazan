@@ -118,14 +118,19 @@ public class Jeopardy implements ActionListener, KeyListener {
 		// If the buttonPressed was the firstButton
 		if (buttonPressed==firstButton) {
 			// Call the askQuestion() method
-		askQuestion("How many bones are in adult bodies", "206", score);
+			
+		askQuestion("How many bones are in adult bodies", "206", 200);
 		
 		} else if (buttonPressed==thirdButton) {
 			// Call the askQuestion() method
-		askQuestion("Does pineapple belong on pizza?", "yes", score);
+			
+		askQuestion("Does pineapple belong on pizza?", "yes", 300);
+		
 		}else if (buttonPressed==fourthButton) {
 			// Call the askQuestion() method
-		askQuestion("What is MHHS theme color", "maroon", score);
+			
+		askQuestion("What is MHHS theme color", "maroon", 400);
+		
 		}
 		
 		// Complete the code in the askQuestion() method. When you play the game, the score should change.
@@ -133,7 +138,9 @@ public class Jeopardy implements ActionListener, KeyListener {
 		// If the buttonPressed was the secondButton
 		else if(buttonPressed==secondButton) {
 			// Call the askQuestion() method with a harder question
+			
 		askQuestion("Yes or Yes", "yes", score);
+		
 		}
 		// Clear the text on the button that was pressed (set the button text to nothing)
 		buttonPressed.resetKeyboardActions();
@@ -144,7 +151,7 @@ public class Jeopardy implements ActionListener, KeyListener {
 		
 		// Use the playJeopardyTheme() method to play music while the use thinks of an answer
 		
-		//playJeopardyTheme();
+		playJeopardyTheme();
 		
 		// Remove this temporary message and replace it with a pop-up that asks the user the question
 		///JOptionPane.showMessageDialog(null, "this is where the question will be asked");
@@ -154,13 +161,13 @@ public class Jeopardy implements ActionListener, KeyListener {
 		
 		
 		// Stop the theme music when they have entered their response. Hint: use the sound variable
-		///Figure this out
 		
-		///sound.stop();
+		sound.stop();
 		
 		// If the answer is correct
 		if(input.equalsIgnoreCase(correctAnswer)) {
 			// Increase the score by the prizeMoney
+			
 			score = score + prizeMoney;
 			
 			// Pop up a message to tell the user they were correct
