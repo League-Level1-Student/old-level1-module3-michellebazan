@@ -1,18 +1,24 @@
 package extra;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class PigLatinTranslator {
+public class PigLatinTranslator implements ActionListener {
 	
 	public static void main(String[] args) {
 		
 	PigLatinTranslator pig = new PigLatinTranslator();
 	pig.createUI();
+
 	
 	}
+	
+	PigLatinTranslatorOther pi = new PigLatinTranslatorOther();
 	
 	JTextField t = new JTextField(10);
 	JTextField t2 = new JTextField(10);
@@ -30,6 +36,15 @@ public class PigLatinTranslator {
 		p.add(t);
 		p.add(b);
 		p.add(t2);
+		b.addActionListener(this);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+		t2.setText(pi.translate(t.getText()));
+		
 		
 	}
      

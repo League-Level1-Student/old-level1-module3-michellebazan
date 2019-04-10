@@ -32,8 +32,7 @@ public class PigLatinTranslatorOther {
          while (i < s.length()) {
 
     // Take care of punctuation and spaces
-    // i deleted a ! point between && and isLetter
-        	  while (i < s.length() && isLetter(s.charAt(i))) {
+           	  while (i < s.length() &&! isLetter(s.charAt(i))) {
               latin = latin + s.charAt(i);
               i++;
          }
