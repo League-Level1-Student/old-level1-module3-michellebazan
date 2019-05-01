@@ -18,34 +18,28 @@ public class WackAMole implements ActionListener {
     public static void main(String[] args) {
     
     WackAMole mole = new WackAMole();
-    mole.createUI();
-    
+   
     Random rand = new Random();
     int a = rand.nextInt(24);
     mole.drawButtons(a);
-    
+    date = new Date();
     
     }
     
     
-    Date date;
+      static Date date;
       JPanel p = new JPanel();
- JFrame j = new JFrame("Wack a Button");
-        
+      JFrame j = new JFrame("Wack a Button");
+      
  
-    public void createUI () {
-        j.add(p);
-        j.setVisible(true);
-        p.setVisible(true);
-        j.setSize(800, 600);    
-    }
-    
+   
     
     JButton b;
     
     
     public void drawButtons(int number) {
     	date = new Date();
+    	
     	for(int i = 0; i < 24; i++) {
     	b = new JButton();
     	b.setSize(40,40);
@@ -56,6 +50,10 @@ public class WackAMole implements ActionListener {
     	}
     	p.add(b);
        }
+    	j.add(p);
+        j.setVisible(true);
+        p.setVisible(true);
+        j.setSize(800, 600);  
     }
     
     
@@ -68,29 +66,32 @@ public class WackAMole implements ActionListener {
    }
     
     
-    int count = 0;
-    int countMissed = 0;
+    static int count = 0;
+    static int countMissed = 0;
     
     
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		JButton buttonPressed = (JButton)e.getSource();
+		
 		if(buttonPressed.getText().equals("    ")) {
 			countMissed++;
 			//Count how many times they hit something other than the mole! button and change the "missed" comments each time (be nice)
 			speak("Be nice");
-			j.dispose();
-			Random rand = new Random();
-		    int a = rand.nextInt(24);
-			drawButtons(a);
+			
+			
 		} else {
 			count++;
 			
-//			Random rand = new Random();
-//		    int a = rand.nextInt(24);
-//			drawButtons(a);
+
 		}
 		
+		j.dispose();
+			Random rand = new Random();
+		    int a = rand.nextInt(24);
+		    WackAMole mole = new WackAMole();
+		    mole.drawButtons(a);
+		System.out.println(count);
 		if(count==10) {
 			endGame(date,count);
 		}
@@ -98,8 +99,30 @@ public class WackAMole implements ActionListener {
 		if(countMissed==5) {
 			speak("You lost");
 			endGame(date,countMissed);
+
 		}
+				
+		/*
+		switch(countMissed) {
+		case 1:
+			speak("Be Nice1");
+			break;
+		case 2:
+			speak("Be Nice2");
+			break;
+		case 3:
+			speak("Be Nice3");
+			break;
+		case 4:
+			speak("Be Nice4");
+			break;
+		case 5:
+			speak("You lose");
+			break;
 		
+		}
+		It works until you hit mole then the regular button. I do not have the knowledge to fix it. 
+		*/
 	}
 	
 	
@@ -115,5 +138,6 @@ public class WackAMole implements ActionListener {
 	     AudioClip sound = JApplet.newAudioClip(getClass().getResource(fileName));
 	     sound.play();
 	}
+	
     //http://level1.jointheleague.org/Mod4Recipes/WhackAMole.html
 }
