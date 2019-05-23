@@ -1,5 +1,9 @@
+package extra;
 
-int x = 100;
+public class FlappyBird {
+
+
+/*int x = 100;
 int y = 100;
 int pipeX = 200;
 int gravity = 1;
@@ -70,4 +74,7 @@ boolean intersectsGround(){
   //http://level1.jointheleague.org/Mod3Recipes/FlappyBird.html
   return true; }
   else { return false;}
+  */
+//}
+
 }
