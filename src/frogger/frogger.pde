@@ -1,3 +1,8 @@
+//     PImage back;
+//     PImage carLeft;
+//     PImage carRight;
+//     PImage frog;
+
 //int x = 10; //frog's x position
 //int y = 550; //frog's y position
 
@@ -7,25 +12,41 @@
 //car car4 = new car(700,400,50,30);
 
 //void setup(){
-//  size(800,600);
+// size(800,600);
+//            back = loadImage("froggerBackground.png");
+//            carLeft = loadImage("carLeft.png");
+//            carLeft.resize(160,100);
+//            carRight = loadImage("carRight.png");
+//            carRight.resize(160,100);
+//            frog = loadImage("frog.png");
+//            frog.resize(50,30);
+            
 //  smooth();
 //  noStroke();
 //}
 
 //void draw(){
-//  background(#6C6262);
-//  fill(#E80240);
-//  ellipse(x,y, 30,30);
+//  background(back);
+          
+//            //image (carRight,250, 210);
+//            image (frog, x, y);
+            
+//  //ellipse(x,y, 30,30);
 //  border();
-//  car1.display();
+//  car1.displayCarRight();
 //  car2.display();
-//  car3.display();
+//  car3.displayCarRight();
 //  car4.display();
   
 //  car1.carLeft();
 //  car2.carRight();
 //  car3.carLeft();
 //  car4.carRight();
+  
+//  car1.intersects(car1);
+//  car2.intersects(car2);
+//  car3.intersects(car3);
+//  car4.intersects(car4);
 //}
 
 
@@ -34,22 +55,22 @@
 //      if(key == CODED){
 //            if(keyCode == UP)
 //            {
-//              y--;
+//              y= y-5;
 //                  //Frog Y position goes up
 //            }
 //            else if(keyCode == DOWN)
 //            {
-//              y++;
+//              y+=5;
 //                  //Frog Y position goes down
 //            }
 //            else if(keyCode == RIGHT)
 //            {
-//              x++;
+//              x+=5;
 //                  //Frog X position goes right
 //            }
 //            else if(keyCode == LEFT)
 //            {
-//              x--;
+//              x-=5;
 //                  //Frog X position goes left
 //            }
 //      }
@@ -72,6 +93,7 @@
 //  return false;
 //  }
 //}
+
 
 //class car{
 //int carX;
@@ -110,9 +132,25 @@
 // return carSize; 
 //}
 
+//boolean intersects(car car) {
+//      if ((y > car.getY() && y < car.getY()+50) && (x > car.getX() && x < car.getX()+car.getSize()))
+//      {
+//        x = 10;
+//        y = 550;
+//             return true;
+//      }
+//      else
+//      {
+//             return false;
+//      }
+//}
+
 //  void display(){
-//      fill(0,255,0);
-//      rect(carX , carY, carSize, 30);
+//       image (carLeft,carX,carY);
+
+//}
+//void displayCarRight(){
+// image (carRight,carX, carY); 
 //}
 
 ////http://level1.jointheleague.org/Mod3Recipes/Frogger.html

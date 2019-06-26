@@ -4,6 +4,7 @@
 /extra/
 /flappyBird/
 /fortune teller.png
+/frogger/
 /gridworld.jar
 /image2.jpg
 /index.jpeg
@@ -22,5 +23,4 @@
 /NetflixQueue.class
 /NetflixRunner.class
 /SimonSays.class
-/froggy.class
-/frogger/
+/Gridworld.class
