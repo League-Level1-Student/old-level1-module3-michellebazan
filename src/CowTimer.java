@@ -12,10 +12,12 @@ public class CowTimer {
 	 * This is an advanced recipe. There may be more than one line of code for each
 	 * instruction. Work in seconds when testing, then change to minutes
 	 */
-
+CowTimer cow = new CowTimer();
 	public static void main(String[] args) throws InterruptedException {
 		/* 1. Make a CowTimer, set the time and start it. */
 
+cow.setTime(1);
+cow.start();
 	}
 
 	private int minutes;
@@ -36,6 +38,10 @@ public class CowTimer {
 		 * You can use the .wav file in the default package, or you can download one
 		 * from freesound.org, then drag it intothe default package.
 		 */
+		System.out.println(minutes);
+		
+		
+		
 
 	}
 
