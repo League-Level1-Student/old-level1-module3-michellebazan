@@ -12,11 +12,11 @@ public class CowTimer {
 	 * This is an advanced recipe. There may be more than one line of code for each
 	 * instruction. Work in seconds when testing, then change to minutes
 	 */
-CowTimer cow = new CowTimer();
+static CowTimer cow = new CowTimer();
 	public static void main(String[] args) throws InterruptedException {
 		/* 1. Make a CowTimer, set the time and start it. */
 
-cow.setTime(1);
+cow.setTime(10);
 cow.start();
 	}
 
@@ -38,9 +38,16 @@ cow.start();
 		 * You can use the .wav file in the default package, or you can download one
 		 * from freesound.org, then drag it intothe default package.
 		 */
-		System.out.println(minutes);
 		
 		
+		for (int i = minutes; i > 0; i--) {
+		
+		
+		System.out.println(i);
+		Thread.sleep(60);
+		
+		}
+		playSound("moo.wav");
 		
 
 	}

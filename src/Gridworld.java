@@ -9,92 +9,77 @@ import info.gridworld.world.World;
 public class Gridworld {
 	
 	public static void main(String[] args) {
-///This is long and i will condense it
 		
-		
-		
-		
-World w = new World();
-w.show();
+World world = new World();
+world.show();
 //
-//creating bugs
-Bug b = new Bug(Color.red);
-Bug b2 = new Bug(Color.BLUE);
 
 //creating flower
-Flower f = new Flower(Color.white);
-Flower f1 = new Flower(Color.red);
-Flower f2 = new Flower(Color.pink);
-Flower f3 = new Flower(Color.white);
-Flower f4 = new Flower(Color.blue);
-Flower f5 = new Flower(Color.cyan);
-Flower f6 = new Flower(Color.MAGENTA);
-Flower f7 = new Flower(Color.orange);
-Flower f8 = new Flower(Color.yellow);
-Flower f9 = new Flower(Color.pink);
-Flower flower = new Flower(Color.GREEN);
+Flower flower2 = new Flower(Color.red);
+Bug bug3 = new Bug(Color.green);
+
+//turning green bug
+bug3.turn();
+bug3.turn();
+bug3.turn();
+//creating bugs
+Bug bug = new Bug(Color.red);
+Bug bug2 = new Bug(Color.BLUE);
+
+for (int i = 0; i < 10; i++) {
+	for (int j = 0; j < 10; j++) {
+		Location locationNew = new Location(i,j);
+		
+		world.add(locationNew, flower2);
+	}
+}
+
+for (int i = 0; i < 10; i++) {
+	for (int j = 0; j < 10; j++) {
+		
+		 if(i==j) {
+			
+			Location locationNueve = new Location(i,j);
+		
+			world.add(locationNueve, bug3);
+		 }
+		}
+		}
+int j =9;
+for (int i = 0; i <10; i++) {
+	
+			//(0,4)(1,3)(2,2)(3,1)(4,0)
+			Location locationOcho = new Location(i,j);
+		
+			world.add(locationOcho, bug2);
+			j--;
+		
+		}
+
+
+//creating flower
+Flower flower = new Flower(Color.white);
 
 //random
 Random ran = new Random();
-int randy =  ran.nextInt(10);
-int rand =  ran.nextInt(10);
-int brock = ran.nextInt(10);
-int ash = ran.nextInt(10);
-int ser = ran.nextInt(10);
-int moto = ran.nextInt(10);
-int lit = ran.nextInt(10);
-int who = ran.nextInt(10);
-int are = ran.nextInt(10);
-int you = ran.nextInt(10);
-int hehe = ran.nextInt(10);
-int black = ran.nextInt(10);
-int pink = ran.nextInt(10);
 
-int randy1 =  ran.nextInt(10);
-int rand1 =  ran.nextInt(10);
-int brock1 = ran.nextInt(10);
-int ash1 = ran.nextInt(10);
-int ser1 = ran.nextInt(10);
-int moto1 = ran.nextInt(10);
-int lit1 = ran.nextInt(10);
-int who1 = ran.nextInt(10);
-int are1 = ran.nextInt(10);
-int you1 = ran.nextInt(10);
-int hehe1 = ran.nextInt(10);
-int black1 = ran.nextInt(10);
-int pink1 = ran.nextInt(10);
+
+int row =  ran.nextInt(10);
+int column = ran.nextInt(10);
 
 //location
-Location l = new Location(randy,randy1);
-Location l2 = new Location(rand,rand1);
-Location l4 = new Location(brock,brock1);
-Location l5 = new Location(ash,ash1);
-Location l6 = new Location(ser,ser1);
-Location l7 = new Location(moto,moto1);
-Location l8 = new Location(lit,lit1);
-Location l9 = new Location(who,who1);
-Location loco = new Location(are,are1);
-Location violeta = new Location(you,you1);
-Location voice = new Location(hehe,hehe1);
-Location fireworks = new Location(black,black1);
-Location july = new Location(pink,pink1);
+Location location = new Location(row,column);
+Location locationleft = new Location(row,column -1);
+Location locationright = new Location(row,column +1);
 
 //adding
-w.add(l,b);
-w.add(l2,b2);
-w.add(l4, f);
-w.add(l5, f1);
-w.add(l6, f2);
-w.add(l7, f3);
-w.add(l8, f4);
-w.add(l9, f5);
-w.add(loco, f6);
-w.add(violeta, f7);
-w.add(voice, f8);
-w.add(fireworks, f9);
-w.add(july, flower);
+world.add(location,bug);
+world.add(locationleft, flower);
+world.add(locationright, flower);
+
+
 //turning bug
-b2.turn();
+bug2.turn();
 
 
 
