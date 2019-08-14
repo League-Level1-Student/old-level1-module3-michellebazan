@@ -1,0 +1,5 @@
+1. computer(String name);{
+	this.name = name;
+   }
+
+2. 
