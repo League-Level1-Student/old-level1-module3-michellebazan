@@ -1,7 +1,5 @@
 /BookOfIllusions.class
 /ChuckleClicker.class
-/CowTimer.class
-/FortuneTeller.class
 /Recipes.html
 /creepy-noise.wav
 /down.jpg
@@ -17,6 +15,8 @@
 /moo.wav
 /right.jpg
 /up.jpg
+/CowTimer.class
+/FortuneTeller.class
 /Gridworld.class
 /Jeopardy.class
 /Movie.class
@@ -24,3 +24,5 @@
 /NetflixQueue.class
 /NetflixRunner.class
 /SimonSays.class
+/Average.class
+/Dog.class
